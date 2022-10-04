@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-size: cover;
+}
+
+.logo {
+    position: relative;
+    left: 50px;
+}
+
+.entire-menu {
+    position: absolute;
+    padding: 30px;
+    width: 100%;
+}
+
+.hamburguer {
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: relative;
+    background: none;
+    margin: 0 0 10px 0;
+}
+
+.hamburguer:after,
+.hamburguer:before,
+.hamburguer span,
+.hamburguer label {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #000;
+    left: 0;
+    position: absolute;
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+
+.hamburguer:before {
+    top: 0;
+}
+
+.hamburguer:after {
+    bottom: 0;
+}
+
+.hamburguer:focus {
+    outline: none;
+}
+
+.hamburguer label {
+    width: 100%;
+    height: 100%;
+    background: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hamburguer span {
+    top: 8px;
+}
+
+#change-hamburguer {
+    display: none;
+}
+
+#change-hamburguer:checked ~ .hamburguer:before,
+#change-hamburguer:checked ~ .hamburguer:after {
+    top: 10px;
+    margin-top: -10%;
+}
+
+#change-hamburguer:checked ~ .hamburguer:before {
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#change-hamburguer:checked ~ .hamburguer:after {
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#change-hamburguer:checked ~ .hamburguer span {
+    opacity: 0;
+}
+
+#change-hamburguer:checked ~ .menu {
+    max-height: 200px;
+}
+
+.menu {
+    max-height: 0;
+    height: auto;
+    background: #7f7f7f71;
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.menu a {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    padding: 5px 10px;
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.menu a:hover {
+    color: #3e996f;
+}
+
+#button-login {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    color: #000;
+    outline: #3e996f;
+    margin-top: 10px;
+    left: 1500px;
+}
+
+#button-login:hover {
+    background: #3e996f;
+}
