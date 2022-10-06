@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -11,7 +12,7 @@ body {
 }
 
 .logo {
-    position: relative;
+    position: absolute;
     left: 80px;
 }
 
@@ -107,7 +108,6 @@ body {
     -webkit-transition: all 300ms ease-in-out;
     transition: all 300ms ease-in-out;
     overflow: hidden;
-    font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 13px;
     width: 40%;
@@ -134,11 +134,76 @@ body {
     font-family: "Poppins", sans-serif;
     color: #000;
     outline: #3e996f;
-    margin: 10px 30px 10px 0;
+    margin: 10px 30px 10px 0px;
     float: right;
     box-shadow: none;
 }
 
 #button-login:hover {
     background: #3e996f;
+}
+
+.info {
+    width: 30vw;
+}
+
+.side-photo {
+    background-color: rgb(231, 231, 231);
+    border-radius: 0px 20px 20px 0px;
+    width: 50vw;
+}
+
+.side-photo > img {
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
+.home-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 120px 0px 0px 63px;
+    width: 97.5vw;
+}
+
+#button-appointment {
+    margin-top: 30px;
+    box-shadow: none;
+}
+
+.services-container {
+    display: flex;
+    background-color: rgb(231, 231, 231);
+    justify-content: space-between;
+    margin: 100px 0px 0px 63px;
+    width: 94vw;
+    border-radius: 20px;
+}
+
+.services {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 10px 100px;
+    margin: 50px;
+}
+
+.services div {
+    color: white;
+    padding: 25px;
+    margin: 10px;
+    background-color: #3e996f;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px grey;
+    width: 350px;
+}
+
+.services div a {
+    text-decoration: none;
+    color: white;
+}
+
+.services div a:hover {
+    text-decoration: none;
+    color: black;
 }
