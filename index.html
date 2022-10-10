@@ -25,29 +25,37 @@
 
     <body>
         <nav>
-            <div class="entire-menu">
-                <input type="checkbox" id="change-hamburguer" />
-                <a class="hamburguer" href="#">
-                    <span></span>
-                    <label for="change-hamburguer"></label>
-                </a>
-                <div class="menu">
-                    <a href="./index.html">Home</a>
-                    <a href="#">Serviços</a>
-                    <a href="#">Médicos</a>
-                    <a href="#">Contactos</a>
+            <div class="sticky-navbar">
+                <div class="entire-menu">
+                    <input type="checkbox" id="change-hamburguer" />
+                    <a class="hamburguer" href="#">
+                        <span></span>
+                        <label for="change-hamburguer"></label>
+                    </a>
+                    <div class="menu">
+                        <a href="./index.html">Home</a>
+                        <a href="#services">Serviços</a>
+                        <a href="#">Médicos</a>
+                        <a href="#">Contactos</a>
+                    </div>
                 </div>
+
+                <img
+                    class="logo"
+                    src="images/logo_pequeno.png"
+                    alt="VetOn Logo"
+                />
+
+                <a href="./login.html">
+                    <button
+                        type="button"
+                        class="btn btn-outline-success"
+                        id="button-login"
+                    >
+                        Login / Sign-Up
+                    </button>
+                </a>
             </div>
-
-            <img class="logo" src="images/logo_pequeno.png" alt="VetOn Logo" />
-
-            <button
-                type="button"
-                class="btn btn-outline-success"
-                id="button-login"
-            >
-                Login / Sign-Up
-            </button>
         </nav>
 
         <div class="home-container">
@@ -61,6 +69,11 @@
                     corporis natus in quaerat! Modi, expedita.Lorem, ipsum dolor
                     sit amet consectetur adipisicing elit. Illo dolores eos
                     laboriosam, incidunt perferendis expedita est quam officia
+                    alias totam optio dolorum accusantium ex, corporis natus in
+                    quaerat! Modi, expedita. Lorem, ipsum dolor sit amet
+                    consectetur adipisicing elit. Illo dolores eos laboriosam,
+                    incidunt perferendis expedita est quam officia alias totam
+                    optio dolorum accusantium ex, corporis natus in quaerat!
                     alias totam optio dolorum accusantium ex, corporis natus in
                     quaerat! Modi, expedita. Lorem, ipsum dolor sit amet
                     consectetur adipisicing elit. Illo dolores eos laboriosam,
@@ -81,7 +94,7 @@
             </div>
         </div>
 
-        <div class="services-container">
+        <div class="services-container" id="services">
             <div class="services">
                 <div>
                     <i class="material-icons">pets</i>

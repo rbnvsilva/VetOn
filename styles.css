@@ -16,6 +16,14 @@ body {
     left: 80px;
 }
 
+.sticky-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(231, 231, 231);
+    height: 70px;
+}
+
 .entire-menu {
     position: absolute;
     padding: 30px;
@@ -111,7 +119,7 @@ body {
     font-weight: 400;
     font-size: 13px;
     width: 40%;
-    border-radius: 0px 20px 20px 0px;
+    margin-top: 20px;
 }
 
 .menu a {
@@ -134,7 +142,7 @@ body {
     font-family: "Poppins", sans-serif;
     color: #000;
     outline: #3e996f;
-    margin: 10px 30px 10px 0px;
+    margin: 15px 30px 10px 0px;
     float: right;
     box-shadow: none;
 }
@@ -167,8 +175,14 @@ body {
 }
 
 #button-appointment {
+    color: #000;
     margin-top: 30px;
     box-shadow: none;
+    outline: #3e996f;
+}
+
+#button-appointment:hover {
+    background: #3e996f;
 }
 
 .services-container {
@@ -205,5 +219,128 @@ body {
 
 .services div a:hover {
     text-decoration: none;
+    color: black;
+}
+
+.signup-title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e3e3e3;
+    min-height: 100vh;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e3e3e3;
+    gap: 50px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 450px;
+    width: 350px;
+    flex-direction: column;
+    gap: 35px;
+    border-radius: 15px;
+    background: #e3e3e3;
+    box-shadow: 16px 16px 32px #c8c8c8, -16px -16px 32px #fefefe;
+}
+
+.inputBox {
+    position: relative;
+    width: 250px;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    color: #000;
+    font-size: 1em;
+    background: transparent;
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transition: 0.1s;
+}
+
+.inputBox span {
+    margin-top: 5px;
+    position: absolute;
+    left: 0;
+    transform: translateY(-4px);
+    margin-left: 10px;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 12px;
+    color: #000;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 3px;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+    transform: translateX(113px) translateY(-15px);
+    font-size: 0.8em;
+    padding: 5px 10px;
+    background: #3e996f;
+    letter-spacing: 0.2em;
+    color: #000;
+    border: 2px;
+}
+
+.inputBox input:valid,
+.inputBox input:focus {
+    border: 2px solid #000;
+}
+
+.submit-login {
+    height: 45px;
+    width: 100px;
+    border-radius: 5px;
+    border: 2px solid #000;
+    cursor: pointer;
+    background-color: transparent;
+    transition: 0.5s;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.submit-login:hover {
+    background-color: #000;
+    color: white;
+}
+
+.submit-signup {
+    height: 45px;
+    width: 100px;
+    border-radius: 5px;
+    border: 2px solid #000;
+    cursor: pointer;
+    background-color: transparent;
+    transition: 0.5s;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.submit-signup:hover {
+    background-color: #000;
+    color: white;
+}
+
+.forgot-password {
     color: black;
 }
