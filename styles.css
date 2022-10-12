@@ -365,10 +365,14 @@ body {
   }
   
   .footer-distributed .footer-left {
-    margin-top: 50px;
+    margin-top: 15px;
     margin-left: 20px;
     width: 40%;
+  }
 
+  .footer-distributed .footer-left p {
+    margin: 30px 0px 0px 10px;
+    font-size: 20px;
   }
 
   
