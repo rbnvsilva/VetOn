@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="/consultas" method="post">
+            <label for="titulo">Titulo</label>
+            <input type="text" id="titulo" name="titulo" required />
+            <br />
+            <label for="hora">Hora</label>
+            <input type="text" id="hora" name="hora" required />
+            <br />
+            <label for="descricao">Descricao</label>
+            <textarea
+                name="descricao"
+                id="descricao"
+                cols="30"
+                rows="10"
+                required
+            ></textarea>
+            <button>Marcar</button>
+        </form>
+    </body>
+</html>
