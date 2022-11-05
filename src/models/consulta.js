@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const consultaSchema = new Schema(
     {
-        titulo: {
+        animal: {
             type: String,
             required: true,
         },

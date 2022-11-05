@@ -1,28 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-    </head>
-    <body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar App Vanilla JS</title>
+
+    <link type="text/css" href="css/calendario.css" rel="stylesheet" />
+  </head>
+  <body>
+    
+    <div id="container">
+      <div id="header">
+        <div id="monthDisplay"></div>
+        <div>
+          <button id="backButton">Back</button>
+          <button id="nextButton">Next</button>
+        </div>
+      </div>
+
+      <div id="weekdays">
+        <div>Sunday</div>
+        <div>Monday</div>
+        <div>Tuesday</div>
+        <div>Wednesday</div>
+        <div>Thursday</div>
+        <div>Friday</div>
+        <div>Saturday</div>
+      </div>
+
+      <div id="calendar"></div>
+    </div>
+
+    <div id="newEventModal">
+        <button id="cancelButton">X</button>
         <form action="/consultas" method="post">
-            <label for="titulo">Titulo</label>
-            <input type="text" id="titulo" name="titulo" required />
-            <br />
-            <label for="hora">Hora</label>
-            <input type="text" id="hora" name="hora" required />
-            <br />
-            <label for="descricao">Descricao</label>
-            <textarea
-                name="descricao"
-                id="descricao"
-                cols="30"
-                rows="10"
-                required
-            ></textarea>
-            <button>Marcar</button>
+            <label>Nome do animal:</label><br><br>
+            <input id="animal" name="animal" required>
+            <label>Introduza a hora da consulta:</label><br><br>
+            <input id="hora" name="hora" required>
+            <label>Descrição:</label><br><br>
+            <textarea id="descricao" name="descricao" style="resize: none;" rows="5" required ></textarea>
+            <button id="saveButton">Marcar</button>
         </form>
-    </body>
+    </div>
+
+
+    <div id="deleteEventModal">
+      <h2 id="eventText"></h2>
+      
+      <button id="deleteButton">Delete</button>
+      <button id="closeButton">Close</button>
+    </div>
+
+    <div id="modalBackDrop"></div>
+
+    <script src="/js/calendario.js"></script>
+  </body>
 </html>

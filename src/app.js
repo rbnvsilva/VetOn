@@ -58,7 +58,13 @@ app.post("/consultas", (req, res) => {
 });
 
 app.get("/agendar-consulta", (req, res) => {
-    res.render("agendar-consulta");
+    Consulta.find()
+    .then((result) => {
+        res.render("agendar-consulta", { consultas: result });
+    })
+    .catch((err) => {
+        console.log(err);
+    });
 });
 
 app.delete("/consultas/:id", (req, res) => {
