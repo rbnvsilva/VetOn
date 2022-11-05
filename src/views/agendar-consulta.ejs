@@ -1,59 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendar App Vanilla JS</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calendar App Vanilla JS</title>
 
-    <link type="text/css" href="css/calendario.css" rel="stylesheet" />
-  </head>
-  <body>
-    
-    <div id="container">
-      <div id="header">
-        <div id="monthDisplay"></div>
-        <div>
-          <button id="backButton">Back</button>
-          <button id="nextButton">Next</button>
+        <link type="text/css" href="css/calendario.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">
+                <div id="monthDisplay"></div>
+                <div>
+                    <button id="backButton">Anterior</button>
+                    <button id="nextButton">Proximo</button>
+                </div>
+            </div>
+
+            <div id="weekdays">
+                <div>Domingo</div>
+                <div>Segunda</div>
+                <div>Terça</div>
+                <div>Quarta</div>
+                <div>Quinta</div>
+                <div>Sexta</div>
+                <div>Sábado</div>
+            </div>
+
+            <div id="calendar"></div>
         </div>
-      </div>
 
-      <div id="weekdays">
-        <div>Sunday</div>
-        <div>Monday</div>
-        <div>Tuesday</div>
-        <div>Wednesday</div>
-        <div>Thursday</div>
-        <div>Friday</div>
-        <div>Saturday</div>
-      </div>
+        <div id="newEventModal">
+            <button id="cancelButton">X</button>
+            <form action="/consultas" method="post">
+                <label>Nome do animal:</label><br /><br />
+                <input id="animal" name="animal" required />
+                <label>Introduza a hora da consulta:</label><br /><br />
+                <input id="hora" name="hora" required />
+                <label>Descrição:</label><br /><br />
+                <textarea
+                    id="descricao"
+                    name="descricao"
+                    style="resize: none"
+                    rows="5"
+                    required
+                ></textarea>
+                <button id="saveButton">Marcar</button>
+            </form>
+        </div>
 
-      <div id="calendar"></div>
-    </div>
+        <div id="deleteEventModal">
+            <h2 id="eventText"></h2>
 
-    <div id="newEventModal">
-        <button id="cancelButton">X</button>
-        <form action="/consultas" method="post">
-            <label>Nome do animal:</label><br><br>
-            <input id="animal" name="animal" required>
-            <label>Introduza a hora da consulta:</label><br><br>
-            <input id="hora" name="hora" required>
-            <label>Descrição:</label><br><br>
-            <textarea id="descricao" name="descricao" style="resize: none;" rows="5" required ></textarea>
-            <button id="saveButton">Marcar</button>
-        </form>
-    </div>
+            <button id="deleteButton">Delete</button>
+            <button id="closeButton">Close</button>
+        </div>
 
+        <div id="modalBackDrop"></div>
 
-    <div id="deleteEventModal">
-      <h2 id="eventText"></h2>
-      
-      <button id="deleteButton">Delete</button>
-      <button id="closeButton">Close</button>
-    </div>
-
-    <div id="modalBackDrop"></div>
-
-    <script src="/js/calendario.js"></script>
-  </body>
+        <script src="/js/calendario.js"></script>
+    </body>
 </html>

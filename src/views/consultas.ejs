@@ -8,16 +8,14 @@
     </head>
     <body>
         <h1>Consultas</h1>
-        <% if (consultas.length > 0) { %> 
-            <% consultas.forEach(consulta => { %>
-                <a href="/consultas/<%= consulta._id %> ">
-                    <h3><%= consulta.titulo %></h3>
-                    <p><%= consulta.hora %></p>
-                    <p><%= consulta.descricao %></p>
-                </a>
-            <% }) %> 
-        <% } else { %>
-            <p>Nao ha consultas</p>
+        <% if (consultas.length > 0) { %> <% consultas.forEach(consulta => { %>
+        <a href="/consultas/<%= consulta._id %> ">
+            <h3><%= consulta.titulo %></h3>
+            <p><%= consulta.hora %></p>
+            <p><%= consulta.descricao %></p>
+        </a>
+        <% }) %> <% } else { %>
+        <p>Nao ha consultas</p>
         <% } %>
     </body>
 </html>
