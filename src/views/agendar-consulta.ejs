@@ -8,6 +8,42 @@
         <link type="text/css" href="css/calendario.css" rel="stylesheet" />
     </head>
     <body>
+
+        <nav>
+            <div class="sticky-navbar">
+                <div class="entire-menu">
+                    <input type="checkbox" id="change-hamburguer" />
+                    <a class="hamburguer" href="#">
+                        <span></span>
+                        <label for="change-hamburguer"></label>
+                    </a>
+                    <div class="menu">
+                        <a href="/">Home</a>
+                        <a href="#services">Serviços</a>
+                        <a href="#doctors">Médicos</a>
+                        <a href="#contact">Contactos</a>
+                    </div>
+                </div>
+
+                <img
+                    class="logo"
+                    src="images/logo_pequeno.png"
+                    alt="VetOn Logo"
+                />
+
+                <a href="/login">
+                    <button
+                        type="button"
+                        class="btn btn-outline-success"
+                        id="button-login"
+                    >
+                        Login / Sign-Up
+                    </button>
+                </a>
+            </div>
+        </nav>
+
+    <div class="calendar">
         <div id="container">
             <div id="header">
                 <div id="monthDisplay"></div>
@@ -57,7 +93,7 @@
         </div>
 
         <div id="modalBackDrop"></div>
-
+    </div>
         <script src="/js/calendario.js"></script>
     </body>
 </html>

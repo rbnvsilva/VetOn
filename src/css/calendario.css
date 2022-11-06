@@ -2,16 +2,163 @@
 
 * {
     font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 body {
+    background-size: cover;
+    width: 100%;
+}
+
+.logo {
+    position: absolute;
+    left: 80px;
+}
+
+.sticky-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(231, 231, 231);
+    height: 70px;
+}
+
+.entire-menu {
+    position: absolute;
+    padding: 30px;
+    width: 80%;
+    left: 35px;
+}
+
+.hamburguer {
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: relative;
+    background: none;
+    margin: 0px 0px 10px 0px;
+}
+
+.hamburguer:after,
+.hamburguer:before,
+.hamburguer span,
+.hamburguer label {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #000;
+    left: 0;
+    position: absolute;
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+
+.hamburguer:before {
+    top: 0;
+}
+
+.hamburguer:after {
+    bottom: 0;
+}
+
+.hamburguer:focus {
+    outline: none;
+}
+
+.hamburguer label {
+    width: 100%;
+    height: 100%;
+    background: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hamburguer span {
+    top: 8px;
+}
+
+#change-hamburguer {
+    display: none;
+}
+
+#change-hamburguer:checked ~ .hamburguer:before,
+#change-hamburguer:checked ~ .hamburguer:after {
+    top: 10px;
+    margin-top: -10%;
+}
+
+#change-hamburguer:checked ~ .hamburguer:before {
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#change-hamburguer:checked ~ .hamburguer:after {
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#change-hamburguer:checked ~ .hamburguer span {
+    opacity: 0;
+}
+
+#change-hamburguer:checked ~ .menu {
+    max-height: 200px;
+}
+
+.menu {
+    max-height: 0;
+    height: auto;
+    background: rgb(231, 231, 231);
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    overflow: hidden;
+    font-weight: 400;
+    font-size: 13px;
+    width: 40%;
+    margin-top: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000000;
+    padding: 5px 10px;
+    display: block;
+    text-transform: uppercase;
+    border-left: 5px solid #000;
+}
+
+.menu a:hover {
+    border-left: 5px solid #3e996f;
+    color: #3e996f;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#button-login {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    color: #000;
+    outline: #3e996f;
+    margin: 15px 30px 10px 0px;
+    float: right;
+    box-shadow: none;
+}
+
+#button-login:hover {
+    background: #3e996f;
+}
+
+.calendar {
     display: flex;
-    margin-top: 50px;
     justify-content: center;
+    margin-top: 150px;
     background-color: #fffcff;
 }
 
-button {
+#backButton, #nextButton , #saveButton , #deleteButton , #closeButton {
     width: 75px;
     cursor: pointer;
     box-shadow: 0px 0px 2px gray;
@@ -40,7 +187,6 @@ button {
 }
 
 #weekdays {
-    width: 100%;
     display: flex;
     color: black;
 }
@@ -51,8 +197,6 @@ button {
 }
 
 #calendar {
-    width: 100%;
-    margin: auto;
     display: flex;
     flex-wrap: wrap;
 }
