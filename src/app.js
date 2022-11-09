@@ -1,10 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const Consulta = require("./models/consulta");
+require("dotenv").config();
 
 const app = express();
-const dbURI =
-    "mongodb+srv://ruben:R5t6BpsRSnbcpUgv@veton.rmmqvlj.mongodb.net/test?retryWrites=true&w=majority";
+const dbURI = process.env.DB_URI;
+
 mongoose
     .connect(dbURI)
     .then(() => app.listen(3000))
