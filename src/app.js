@@ -23,6 +23,10 @@ app.get("/login", (req, res) => {
     res.render("login");
 });
 
+app.get("/sign-up", (req, res) => {
+    res.render("sign-up");
+});
+
 app.get("/consultas", (req, res) => {
     Consulta.find()
         .then((result) => {

@@ -483,6 +483,19 @@ body {
     box-shadow: 16px 16px 32px #c8c8c8, -16px -16px 32px #fefefe;
 }
 
+.card-signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    width: 450px;
+    flex-direction: column;
+    gap: 35px;
+    border-radius: 15px;
+    background: #e3e3e3;
+    box-shadow: 16px 16px 32px #c8c8c8, -16px -16px 32px #fefefe;
+}
+
 .inputBox {
     position: relative;
     width: 250px;
